@@ -1,0 +1,11 @@
+from Turing import TM
+
+states = ['q0','q1','q2','q3','q4','q5']
+alphabet = list("()")
+tapeAlphabet = list("()CXY")
+transitions = {
+    ('q0','('):('q1','C','D'),
+    ('q1','('):('q1','(','D'), # avanzar mientras se encuentre '('
+    ('q1',')'):('q2','X','I'),
+    ('q2','X'):('q0','X','D'),
+    ('q2','X'):('q0','X','D'),
